@@ -1,9 +1,9 @@
 const pool = require('../lib/db');
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcrypt');
 
-router.post('/register', async (req, res) => {
+router.post('/api/register', async (req, res) => {
     const { firstname, lastname, username, email, password } = req.body;
     
     if(!firstname || !lastname || !username || !email || !password){

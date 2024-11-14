@@ -1,0 +1,13 @@
+<%- include('../components/Head', {title : "Middleware"}) %>
+<body>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: '<%= status %>', 
+        }).then(()=>{ 
+            window.location.href='<%= path %>'; 
+        })
+    </script>
+</body>
+<%- include('../components/Footer') %>
