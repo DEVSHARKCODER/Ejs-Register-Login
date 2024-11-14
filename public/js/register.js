@@ -74,8 +74,11 @@ document.getElementById('RegisForm').addEventListener('submit', async (e) => {
                 title:'Success',
                 text:'Registration successful',
                 icon: 'success'
+            }).then(()=>{
+                document.getElementById('RegisForm').reset();
+                window.location.href='/login'
             })
-            document.getElementById('RegisForm').reset();
+            
         }
     }
     catch(error){
